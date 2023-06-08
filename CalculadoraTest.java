@@ -21,6 +21,19 @@ public class CalculadoraTest {
         assert result == 3.0;
         System.out.println("Resta correcta");
     }
+    
+    private static void testMultiplicacion() {
+        double result = Calculador.multiplicacion(2.0, 3.0);
+        assert result == 6.0;
+        System.out.println("Multiplicacion correcta");
+    }
+
+    private static void testDivision() {
+        double result = Calculador.division(10.0, 2.0);
+        assert result == 5.0;
+        System.out.println("Division correcta");
+    }
+
 
 }
 
