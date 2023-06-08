@@ -7,7 +7,6 @@ public class CalculadoraTest {
         testMultiplicacion();
         testDivision();
         testRaiz();
-        testExponencial();
     }
 
     private static void testSuma() {
@@ -34,6 +33,10 @@ public class CalculadoraTest {
         System.out.println("Division correcta");
     }
 
-
+    private static void testRaiz() {
+        double result = Calculador.raizCuadrada(25.0);
+        assert Math.abs(result - 5.0) < 0.001;
+        System.out.println("Raiz cuadrada correcta");
+    }
 }
 
