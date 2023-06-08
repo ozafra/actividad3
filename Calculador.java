@@ -21,5 +21,19 @@ public class Calculador {
             throw new IllegalArgumentException("No se puede dividir entre cero");
         }
     }
+    public static double raizCuadrada(double num) {
+        if (num >= 0) {
+            double raizAproximada = 1.0;
+            double precision = 0.001;
+  
+            while (Math.abs(raizAproximada * raizAproximada - num) > precision) {
+                raizAproximada = (raizAproximada + num / raizAproximada) / 2.0;
+            }
+  
+            return raizAproximada;
+        } else {
+            throw new IllegalArgumentException("No se puede calcular la raíz cuadrada de un número negativo");
+        }
+    }
   
 }
